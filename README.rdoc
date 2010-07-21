@@ -1,0 +1,42 @@
+= Pageranker
+
+Check the PageRank of a website.
+
+== Install
+
+    gem install pageranker
+
+== Usage
+
+    pageranker http://www.pioz.it/
+
+For your purposes, you can also use the Pageranker module:
+
+    irb(main):001:0> require 'rubygems'
+    => true
+    irb(main):002:0> require 'pageranker'
+    => true
+    irb(main):003:0> Pageranker::check('google.it')
+    => 8
+    irb(main):004:0> Pageranker::check('http://www.google.com')
+    => 10
+    irb(main):005:0> Pageranker::check('dsadasdasdsadrfer.com')
+    => nil
+
+== Support
+
+You can use this email address for any questions or help: mailto:enrico@megiston.it.
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2010 Enrico Pilotto. See LICENSE[http://github.com/pioz/pageranker/blob/master/LICENSE] for details.

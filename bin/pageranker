@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+$PAGERANKER_PATH = "#{File.dirname(__FILE__)}/.."
+
+require "#{$PAGERANKER_PATH}/lib/pageranker.rb"
+
+if ARGV.size != 1
+  puts "Usage: #{$0} WEBSITE"
+else
+  puts Pageranker::check(ARGV[0])
+end
