@@ -1,9 +1,10 @@
 module Pageranker
   require 'open-uri'
+  require 'cgi'
 
   def self.check(website)
     return nil if website.nil?
-    url = "http://toolbarqueries.google.com/search?client=navclient-auto&ch=#{checksum(website)}&ie=UTF-8&oe=UTF-8&features=Rank&q=info:#{website}"
+    url = "http://toolbarqueries.google.com/search?client=navclient-auto&ch=#{checksum(website)}&ie=UTF-8&oe=UTF-8&features=Rank&q=info:#{CGI::escape(website)}"
     begin
       res = open(url).read
     rescue OpenURI::HTTPError
